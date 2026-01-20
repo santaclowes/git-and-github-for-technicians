@@ -1,0 +1,1 @@
+This is a placeholder file for the job_configs directory where job configurations for our most common 3D printing processes will be stored.
