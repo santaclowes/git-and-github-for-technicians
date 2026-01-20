@@ -1,4 +1,4 @@
-printer: { model: "PrintExpert3D-400", kinematics: cartesian, bed: { x: 220, y: 220, z: 250 } }
+printer: { model: "PrintExpert3D-500", kinematics: cartesian, bed: { x: 220, y: 220, z: 250 } }
 motion: { vmax: 200, amax: 3000, z: { vmax: 12, amax: 80 } }
 axes:
   x: { travel: [0,220], home: min }
