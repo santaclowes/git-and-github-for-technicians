@@ -1,0 +1,14 @@
+printer: { model: "PrintExpert3D-400", kinematics: cartesian, bed: { x: 220, y: 220, z: 250 } }
+motion: { vmax: 200, amax: 3000, z: { vmax: 12, amax: 80 } }
+axes:
+  x: { travel: [0,220], home: min }
+  y: { travel: [0,220], home: min }
+  z: { travel: [0,250], home: probe }
+extruder: { nozzle: 0.4, filament: 1.75, temp_max: 260, min_extrude_temp: 170 }
+bed: { temp_max: 120 }
+probe: { offsets: [-30,-5,0] }
+mesh: { area: { min: [20,20], max: [200,200] }, grid: [5,5] }
+macros:
+  start: "M140 S{bed|60}; M104 S{hotend|200}; G28; M190 S{bed|60}; M109 S{hotend|200}"
+  end:   "G91; G1 E-2 Z10; G90; M104 S0; M140 S0; M106 S0"
+notes: "Demonstration pseudo‑config file for training purposes; all values are placeholders."
